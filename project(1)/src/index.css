@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.certificate-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #14397d;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.certificate-border {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  border: 2px solid #d4af37;
+  pointer-events: none;
+}
+
+/* Animations */
+.certificate-preview {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certificate-preview {
+    padding: 1rem;
+  }
+
+  .certificate-title {
+    font-size: 24px;
+  }
+
+  .participant-name {
+    font-size: 22px;
+  }
+
+  .certificate-text {
+    font-size: 14px;
+  }
+}
